@@ -10,74 +10,59 @@
 </head>
 
 <body>
-    <div clas="container">
-        <div class="jumbotron text-center" style="background:url(https://images.alphacoders.com/453/453091.jpg); background-size: 100%; height: 100%;" )>
-            <h1 style="color: white; text-shadow: 2px 2px black; ">Mission to Mars</h1>
-            <br>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
             <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
         </div>
-    </div>
-
-    <!-- surf data -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Latest Mars News</h2>
-                <h4>{{ mars.news_title }}</h4>
-                <p>{{ mars.news_p }}</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Latest Mars News</h2>
+                    <h3>{{ mars.news_title }}</h3>
+                    <p>{{ mars.news_p }}</p>
+                </div>
             </div>
-        </div>
-    </div>
-    </hr>
 
-    <!--- Two Column Section -->
-    <div class="container padding">
-        <div class="row padding">
-            <div class="col-lg-8 col-md-8 col-sm-12">
-                <h2>Featured Mars Image</h2>
-                <img src="{{ mars.featured_img_link }}" class="img-fluid" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+            <div class="row ">
+                <div class="col-md-8">
+                    <div class="col-md-12 ">
+                        <h2>featured_image_url</h2>
+                        <hr>
+                        <div class="thumbnail">
+                            <img src="{{mars_data.featured_image_url}}" width=" 50% " class="img-thumbnail float-left " alt="Featured Mars Image ">
 
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <h2>Mars Facts </h2>
-                {{ mars.marstable_html}}
-            </div>
-        </div>
-    </div>
-    </div>
+                        </div>
+                        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+                        <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
+                            created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+                    </div>
+                </div>
 
-    <hr>
-    <!--- Mars Hemispheres -->
-
-    <div class="container-fluid padding">
-        <div class="row wewlcome text-center">
-            <div class="col-12">
-                <h2>Mars Hemispheres</h2>
-            </div>
-            <hr class="light">
-        </div>
-    </div>
-    </br>
-    <!--- Cards -->
-    <!--- Adding informational cards-->
-    <div class="container-fluid padding">
-        <div class="row padding">
-
-            {% for mars_img in mars.hemi_img %}
-            <div class="col-md-6">
-                <div class="card text-center">
-                    <img class="card-img-top" src="{{ mars_img.img_url }}" style="max-width:100%; max-height: auto;">
-                    <div class="card-body">
-                        <h4 class="card-title">{{mars_img.title}}</h4>
+                <div class="col-md-4 ">
+                    <div class="col-md-12 ">
+                        <h3>Mars Facts</h3>
+                        <hr>
+                        <div class="row ">
+                            <div class="col-3 col-md-6 ">
+                                <a href="max_temp.html ">
+                                    <img src="{{mars_data.marstable_html}} " width="100% " alt="marstable_html ">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
+    <footer class="page-footer font-small ">
+        <div class="footer-copyright text-center py-3 ">&copy;Jillian Nemec Coding Bootcamp 2021</div>
+    </footer>
+</body>
 
-    <hr class="light">
+</div>
 
+</div>
 </body>
 
 </html>
