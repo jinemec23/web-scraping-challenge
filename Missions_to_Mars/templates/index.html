@@ -19,41 +19,41 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2>Latest Mars News</h2>
-                    <h3>{{ mars.news_title }}</h3>
-                    <p>{{ mars.news_p }}</p>
+                    <h3>{{ mars_data.news_title }}</h3>
+                    <p>{{ mars_data.news_p }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-8">
+                <div class="col-md-12 ">
+                    <h2>Featured Image</h2>
+                    <hr>
+                    <div class="thumbnail">
+                        <img src="{{mars_data.featured_image_url}}" width=" 50% " class="img-thumbnail float-left " alt="Featured Mars Image ">
+
+                    </div>
+                    <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+                    <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
+                        created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
                 </div>
             </div>
 
-            <div class="row ">
-                <div class="col-md-8">
-                    <div class="col-md-12 ">
-                        <h2>featured_image_url</h2>
-                        <hr>
-                        <div class="thumbnail">
-                            <img src="{{mars_data.featured_image_url}}" width=" 50% " class="img-thumbnail float-left " alt="Featured Mars Image ">
-
-                        </div>
-                        <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-                        <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
-                            created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 ">
-                    <div class="col-md-12 ">
-                        <h3>Mars Facts</h3>
-                        <hr>
-                        <div class="row ">
-                            <div class="col-3 col-md-6 ">
-                                <a href="max_temp.html ">
-                                    <img src="{{mars_data.marstable_html}} " width="100% " alt="marstable_html ">
-                                </a>
-                            </div>
+            <div class="col-md-4 ">
+                <div class="col-md-12 ">
+                    <h3>Mars Facts</h3>
+                    <hr>
+                    <div class="row ">
+                        <div class="col-3 col-md-6 ">
+                            <a href="max_temp.html ">
+                                <img src="{{mars_data.marstable_html}} " width="100% " alt="marstable_html ">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <footer class="page-footer font-small ">
         <div class="footer-copyright text-center py-3 ">&copy;Jillian Nemec Coding Bootcamp 2021</div>
