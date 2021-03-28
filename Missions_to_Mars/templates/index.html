@@ -17,25 +17,22 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
                     <h2>Latest Mars News</h2>
-                    <h3>{{ mars_data.news_title }}</h3>
-                    <p>{{ mars_data.news_p }}</p>
+                    <h4>NASA Ingenuity Mars Helicopter Prepares for First Flight</h4>
+                    <p>Now uncocooned from its protective carbon-fiber shield, the helicopter is being readied for its next steps. </p>
                 </div>
             </div>
         </div>
-        <div class="row ">
-            <div class="col-md-8">
+        <div class=" row ">
+            <div class="col-md-8 ">
                 <div class="col-md-12 ">
                     <h2>Featured Image</h2>
                     <hr>
-                    <div class="thumbnail">
-                        <img src="{{mars_data.featured_image_url}}" width=" 50% " class="img-thumbnail float-left " alt="Featured Mars Image ">
+                    <div class="thumbnail ">
+                        <img src="https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/image/featured/mars2.jpg " class="img-thumbnail float-left " alt="Featured Mars Image ">
 
                     </div>
-                    <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-                    <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
-                        created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
                 </div>
             </div>
 
@@ -44,20 +41,91 @@
                     <h3>Mars Facts</h3>
                     <hr>
                     <div class="row ">
-                        <div class="col-3 col-md-6 ">
-                            <a href="max_temp.html ">
-                                <img src="{{mars_data.marstable_html}} " width="100% " alt="marstable_html ">
-                            </a>
+                        <div class="table ">
+                            <table border=" 1 " class="dataframe ">
+                                <thead>
+                                    <tr style="text-align: right; padding-top;: 10px ">
+
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Value</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Equatorial Diameter:</th>
+                                        <td>6,792 km</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Polar Diameter:</th>
+                                        <td>6,752 km</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mass:</th>
+                                        <td>6.39 × 10^23 kg (0.11 Earths)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Moons:</th>
+                                        <td>2 (Phobos &amp; Deimos)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Orbit Distance:</th>
+                                        <td>227,943,824 km (1.38 AU)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Orbit Period:</th>
+                                        <td>687 days (1.9 years)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Surface Temperature:</th>
+                                        <td>-87 to -5 °C</td>
+                                    </tr>
+                                    <tr>
+                                        <th>First Record:</th>
+                                        <td>2nd millennium BC</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Recorded By:</th>
+                                        <td>Egyptian astronomers</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    <footer class="page-footer font-small ">
-        <div class="footer-copyright text-center py-3 ">&copy;Jillian Nemec Coding Bootcamp 2021</div>
-    </footer>
+
+        <div class=" container content text-center ">
+            <h2 style='text-align: center;'>Mars Hemispheres</h2>
+            <div class="row ">
+                <div class="col-md-6 ">
+                    <img src="https://astrogeology.usgs.gov/cache/images/39d3266553462198bd2fbc4d18fbed17_cerberus_enhanced.tif_thumb.png " width="50% " class=" img-thumbnail " alt="Cerberus Hemisphere Enhanced thumbnail ">
+                    <p>Cerberus Hemisphere</p>
+                </div>
+                <div class="col-md-6 ">
+
+                    <img src="https://astrogeology.usgs.gov/cache/images/08eac6e22c07fb1fe72223a79252de20_schiaparelli_enhanced.tif_thumb.png " width="50% " class="img-thumbnail " alt="Schiaparelli Hemisphere Enhanced thumbnail ">
+                    <p>Schiaparelli Hemisphere</p>
+                </div>
+            </div>
+            <br>
+            <div class="row ">
+                <div class="col-md-6 ">
+                    <img src="https://astrogeology.usgs.gov/cache/images/55a0a1e2796313fdeafb17c35925e8ac_syrtis_major_enhanced.tif_thumb.png " width="50% " class="img-thumbnail " alt=" Syrtis Major Hemisphere Enhanced thumbnail ">
+                    <p>Syrtis Major Hemisphere</p>
+                </div>
+                <div class="col-md-6 ">
+                    <img src="https://astrogeology.usgs.gov/cache/images/4e59980c1c57f89c680c0e1ccabbeff1_valles_marineris_enhanced.tif_thumb.png " width="50% " class="img-thumbnail " alt="Valles Marineris Hemisphere Enhanced thumbnail ">
+                    <p>Valles Marineris Hemisphere</p>
+                </div>
+            </div>
+        </div>
+        <footer class=" page-footer font-small ">
+            <div class="footer-copyright text-center py-3 ">&copy;Jillian Nemec Coding Bootcamp 2021</div>
+        </footer>
 </body>
 
 </div>
